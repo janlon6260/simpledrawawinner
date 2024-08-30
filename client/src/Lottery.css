@@ -8,48 +8,47 @@
     text-align: center;
     position: relative;
     z-index: 1;
-    overflow: hidden; /* Sikrer at ingen elementer strekker seg utenfor containeren */
+    overflow: hidden;
 }
 
 .lottery-container::before {
     content: "";
     background-image: url('./img/logo.png');
-    background-size: 150px; /* Setter en fast størrelse på bakgrunnsbildet */
+    background-size: 150px;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: local;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.1; /* Setter opasiteten kun på bakgrunnsbildet */
-    z-index: 0; /* Sørger for at bildet er bak alt innhold */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    opacity: 0.1; 
+    z-index: 0;
+    width: 150px;
+    height: 150px;
+    pointer-events: none;
 }
 
 .input-group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 15px;
     z-index: 1;
-    position: relative; /* Sikrer at input-feltene ligger over bakgrunnsbildet */
+    position: relative;
 }
 
 .input-group label {
-    margin-right: 10px;
-    flex: 1;
+    margin-bottom: 5px;
     text-align: left;
 }
 
 input[type="number"] {
     padding: 5px;
-    width: 100px;
+    width: 100%;
     border-radius: 4px;
     border: 1px solid #ccc;
     background-color: #ffffff;
     color: #000000;
-    flex: 2;
     box-sizing: border-box;
     z-index: 1;
     position: relative;
@@ -84,8 +83,8 @@ button.draw-button:hover, button.export-button:hover, button.reset-button:hover 
 
 .winner-list {
     margin-top: 20px;
-    animation: fadeIn 1s ease-in; /* Fade-in effekt når vinnerne trekkes */
-    z-index: 1; /* Sikrer at vinnerlisten ligger over bakgrunnsbildet */
+    animation: fadeIn 1s ease-in;
+    z-index: 1;
     position: relative;
 }
 
@@ -114,7 +113,6 @@ button.draw-button:hover, button.export-button:hover, button.reset-button:hover 
     transition: opacity 500ms ease-in;
 }
 
-/* Definerer fade-in animasjonen */
 @keyframes fadeIn {
     from {
         opacity: 0;

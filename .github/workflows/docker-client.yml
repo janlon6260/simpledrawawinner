@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "simpledrawawinner-client/**"
+      - "client/**"
 
 jobs:
   build:

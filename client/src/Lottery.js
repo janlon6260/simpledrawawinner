@@ -67,7 +67,7 @@ const Lottery = () => {
                     type="number"
                     value={numTickets}
                     onChange={(e) => setNumTickets(e.target.value)}
-                    placeholder="Skriv inn antall loddbøker"
+                    placeholder="Skriv inn antall loddbøker KADINGS"
                 />
             </div>
             <div className="input-group">

@@ -1,2 +1,5 @@
-# simpledrawawinner
-Simple code to draw a random winner based on a few data input from user.
+# Draw a winner
+
+Simple code to be able to draw one or more winners based on data entered by the user (for example, the number of tickets sold, how many winners, etc.).
+
+Work in progress.
